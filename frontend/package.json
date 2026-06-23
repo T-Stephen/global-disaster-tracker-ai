@@ -1,0 +1,38 @@
+{
+  "name": "global-disaster-tracker-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "ajv": "^6.12.6",
+    "ajv-keywords": "^3.5.2",
+    "axios": "^1.13.5",
+    "bootstrap": "^5.3.8",
+    "leaflet": "^1.9.4",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "^18.2.0",
+    "react-globe.gl": "^2.37.0",
+    "react-leaflet": "^4.2.1",
+    "react-leaflet-cluster": "^3.1.1",
+    "react-scripts": "5.0.1",
+    "three": "^0.183.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

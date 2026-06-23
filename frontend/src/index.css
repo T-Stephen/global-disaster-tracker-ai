@@ -1,0 +1,43 @@
+/* --- GLOBAL RESET --- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #050505;
+  color: #c5c6c7;
+  overflow: hidden; /* Prevents double scrollbars */
+}
+
+/* --- CUSTOM SCROLLBAR (Cyberpunk Style) --- */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #0b0c10;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #00f0ff;
+  border-radius: 2px;
+}
+
+/* --- EVENT CARD HOVER EFFECTS --- */
+.event-card {
+  transition: all 0.2s ease-in-out;
+  border-left: 3px solid transparent;
+}
+
+.event-card:hover {
+  background-color: rgba(0, 240, 255, 0.05);
+  border-left: 3px solid #00f0ff;
+  padding-left: 1.2rem; /* Slide effect */
+}
+
+/* --- ANIMATIONS --- */
+@keyframes pulse {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite ease-in-out;
+}

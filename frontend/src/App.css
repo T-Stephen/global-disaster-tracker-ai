@@ -1,0 +1,146 @@
+/* frontend/src/App.css */
+
+/* 🌍 Theme variables */
+:root {
+  --primary: #00bfff;        /* Accent color */
+  --primary-hover: #1ec8ff;  /* Hover accent */
+  --bg: #0a0f1c;             /* Background */
+  --bg-gradient: linear-gradient(135deg, #0a0f1c, #1a1f2c);
+  --text: #ffffff;           /* Main text */
+  --muted: #cccccc;          /* Muted text */
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --button-bg: rgba(255, 255, 255, 0.08);
+  --button-hover: rgba(255, 255, 255, 0.2);
+  --shadow: rgba(0, 0, 0, 0.6);
+  --transition: all 0.3s ease-in-out;
+}
+
+/* 🌌 Global styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 📦 App container */
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ✨ Headings */
+h1 {
+  margin: 20px 0;
+  color: var(--primary);
+  font-size: 2.5rem;
+  text-shadow: 0 3px 6px var(--shadow);
+  letter-spacing: 1px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/* 🎛 Filter buttons container */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  gap: 14px;
+  max-width: 900px;
+}
+
+/* 🔘 Filter buttons */
+.filter-buttons button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: var(--button-bg);
+  color: var(--text);
+  transition: var(--transition);
+  box-shadow: 0 4px 12px var(--shadow);
+  backdrop-filter: blur(8px);
+}
+
+.filter-buttons button:hover {
+  transform: translateY(-3px) scale(1.08);
+  background-color: var(--button-hover);
+  color: var(--primary-hover);
+  box-shadow: 0 6px 16px var(--shadow);
+}
+
+/* 📍 Custom map marker */
+.custom-marker {
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--bg);
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 3px 8px var(--shadow);
+  transition: var(--transition);
+}
+
+.custom-marker:hover {
+  transform: scale(1.25);
+  box-shadow: 0 6px 14px var(--shadow);
+  background: var(--primary-hover);
+}
+
+/* 📱 Responsive adjustments */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .filter-buttons button {
+    font-size: 15px;
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-buttons {
+    gap: 10px;
+  }
+  .filter-buttons button {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .filter-buttons button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
+
+/* 🎬 Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
